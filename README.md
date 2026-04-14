@@ -95,5 +95,15 @@ TEST SUITE: None
 ### Redis
 
 ```shell
+$ helm upgrade --install redis .
+Release "redis" does not exist. Installing it now.
+NAME: redis
+LAST DEPLOYED: Tue Apr 14 12:11:11 2026
+NAMESPACE: roboshop
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
 
 ```
+
+
