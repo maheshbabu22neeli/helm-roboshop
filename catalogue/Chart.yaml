@@ -7,4 +7,7 @@ name: catalogue
 # This is the chart version
 version: 0.0.1
 
+# This the image or app version
+appVersion: 1.2.0
+
 description: "Catalogue Helm Chart"
