@@ -106,4 +106,14 @@ TEST SUITE: None
 
 ```
 
-
+### User
+```shell
+$ helm upgrade --install user .
+Release "user" does not exist. Installing it now.
+NAME: user
+LAST DEPLOYED: Tue Apr 14 12:18:10 2026
+NAMESPACE: roboshop
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+```

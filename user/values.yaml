@@ -3,7 +3,7 @@ configMap:
   mongoUrl: "mongodb://mongodb:27017/catalogue"
 
 deployment:
-  image: user
+  image: maheshbabu22neeli/user
   imageVersion: 1.2.0
   replicas: 1
   changeCause: "deploying user:1.2.0"
