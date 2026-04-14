@@ -18,10 +18,23 @@
 6. templates/configmap.yaml
 7. and etc
 
+
+### Install Helm
+
+```shell
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+
+helm version
+```
+
 ### Helm commands
 
 ```shell
 kubectl create namespace roboshop
+kubens roboshop
+
 helm install <chart-name> .               -> First time install the app
 helm list                                 -> list of the charts installed
 helm uninstall <chart-name>               -> removes the app
@@ -34,4 +47,8 @@ helm rollback <chart-name>  2             -> rollback to specific version 2
 
 ## Helm-Roboshop
 
-### 
+### Mongodb
+
+```shell
+
+```

@@ -4,7 +4,7 @@ metadata:
   name: mongodb
   namespace: roboshop
   annotations:
-    kubernetes.io/change-cause: {{ .Values.deployment.change-cause }}
+    kubernetes.io/change-cause: {{ .Values.deployment.changeCause }}
   labels:
     tier: database
     project: rosboshop

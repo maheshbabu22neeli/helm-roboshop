@@ -2,5 +2,5 @@ deployment:
   image: maheshbabu22neeli/mongodb
   imageVersion: 1.2.0
   replicas: 1
-  change-cause: "deploying mongodb:1.2.0"
+  changeCause: "deploying mongodb:1.2.0"
 
