@@ -1,0 +1,10 @@
+configMap:
+  RABBITMQ_DEFAULT_USER: "roboshop"
+  RABBITMQ_DEFAULT_PASS: "roboshop123"
+
+deployment:
+  image: rabbitmq
+  imageVersion: 3
+  replicas: 1
+  changeCause: "deploying rabbitmq:3 from docker-hub"
+

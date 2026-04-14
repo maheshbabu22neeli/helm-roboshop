@@ -1,0 +1,14 @@
+# Config Map
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rabbitmq
+  namespace: roboshop
+  labels:
+    tier: database
+    project: rosboshop
+    component: rabbitmq
+
+data:
+  RABBITMQ_DEFAULT_USER: {{ .Values.configMap.RABBITMQ_DEFAULT_USER }}
+  RABBITMQ_DEFAULT_PASS: {{ .Values.configMap.RABBITMQ_DEFAULT_PASS }}

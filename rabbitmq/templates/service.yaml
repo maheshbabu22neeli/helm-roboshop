@@ -1,0 +1,22 @@
+# Adding service for Mongo db
+# We are taking ClusterIP service as this communicate with internal POD's only
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq
+  namespace: roboshop
+  labels:
+    tier: database
+    project: rosboshop
+    component: rabbitmq
+
+spec:
+  selector:
+    # selecting rabbitmq pod based on the below labels and add to the service
+    tier: database
+    project: rosboshop
+    component: rabbitmq
+  ports:
+    - protocol: TCP
+      port: 5672          # service port
+      targetPort: 5672    # container port

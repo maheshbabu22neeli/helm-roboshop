@@ -168,3 +168,8 @@ TEST SUITE: None
 
 ````
 
+### RabbitMq
+
+````shell
+
+````
