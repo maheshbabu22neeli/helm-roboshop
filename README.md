@@ -21,6 +21,7 @@
 ### Helm commands
 
 ```shell
+kubectl create namespace roboshop
 helm install <chart-name> .               -> First time install the app
 helm list                                 -> list of the charts installed
 helm uninstall <chart-name>               -> removes the app
