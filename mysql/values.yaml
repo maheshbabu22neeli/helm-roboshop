@@ -1,0 +1,6 @@
+deployment:
+  image: maheshbabu22neeli/mysql
+  imageVersion: 1.2.0
+  replicas: 1
+  changeCause: "deploying mysql:1.2.0"
+

@@ -1,0 +1,22 @@
+# Adding service for Mongo db
+# We are taking ClusterIP service as this communicate with internal POD's only
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  namespace: roboshop
+  labels:
+    tier: database
+    project: rosboshop
+    component: mysql
+
+spec:
+  selector:
+    # selecting mysql pod based on the below labels and add to the service
+    tier: database
+    project: rosboshop
+    component: mysql
+  ports:
+    - protocol: TCP
+      port: 3306          # service port
+      targetPort: 3306    # container port
