@@ -50,5 +50,30 @@ helm rollback <chart-name>  2             -> rollback to specific version 2
 ### Mongodb
 
 ```shell
+$ helm upgrade --install mongodb .
+Release "mongodb" does not exist. Installing it now.
+NAME: mongodb
+LAST DEPLOYED: Tue Apr 14 11:44:30 2026
+NAMESPACE: roboshop
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+
+$ helm list
+NAME    NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
+mongodb roboshop        1               2026-04-14 11:44:30.189137373 +0000 UTC deployed        mongodb-0.0.1
+
+
+$ kubectl get pods
+NAME                       READY   STATUS    RESTARTS   AGE
+mongodb-5f5cd96878-hpljh   1/1     Running   0          71s
+
+$ kubectl get deployment
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+mongodb   1/1     1            1           82s
+
+$ kubectl get service
+NAME      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)     AGE
+mongodb   ClusterIP   10.100.182.86   <none>        27017/TCP   89s
 
 ```
