@@ -1,0 +1,22 @@
+# Adding service for Redis
+# We are taking ClusterIP service as this communicate with internal POD's only
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  namespace: roboshop
+  labels:
+    tier: database
+    project: rosboshop
+    component: redis
+
+spec:
+  selector:
+    # selecting redis pod based on the below labels and add to the service
+    tier: database
+    project: rosboshop
+    component: redis
+  ports:
+    - protocol: TCP
+      port: 6379          # service port
+      targetPort: 6379    # container port

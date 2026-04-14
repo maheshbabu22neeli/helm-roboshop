@@ -1,0 +1,6 @@
+deployment:
+  image: redis
+  imageVersion: 7.0
+  replicas: 1
+  changeCause: "deploying redis:7.0 from docker-hub"
+

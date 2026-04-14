@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+  namespace: roboshop
+  annotations:
+    kubernetes.io/change-cause: {{ .Values.deployment.changeCause }}
+  labels:
+    tier: database
+    project: rosboshop
+    component: redis
+
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    # This match labels will go and find the pods who contain these labels
+    matchLabels:
+      tier: database
+      project: rosboshop
+      component: redis
+
+  # This is a POD definition/template (pod is a subset of replica-set)
+  template:
+    metadata:
+      # POD Labels, these labels will refer in replica-set selector
+      labels:
+        tier: database
+        project: rosboshop
+        component: redis
+    spec:
+      containers:
+        - name: redis
+          image: {{ .Values.deployment.image }}:{{ .Values.deployment.imageVersion }}
+          imagePullPolicy: Always
+

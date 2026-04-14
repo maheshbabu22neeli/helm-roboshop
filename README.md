@@ -82,5 +82,18 @@ mongodb   ClusterIP   10.100.182.86   <none>        27017/TCP   89s
 ### Catalogue
 
 ```shell
+$ helm upgrade --install catalogue .
+Release "catalogue" does not exist. Installing it now.
+NAME: catalogue
+LAST DEPLOYED: Tue Apr 14 12:00:42 2026
+NAMESPACE: roboshop
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+```
+
+### Redis
+
+```shell
 
 ```
