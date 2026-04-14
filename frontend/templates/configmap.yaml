@@ -10,5 +10,5 @@ metadata:
     component: frontend
 
 data:
-  MONGO: {{ .Values.configMap.MONGO }}
+  MONGO: "{{ .Values.configMap.MONGO }}"
   MONGO_URL: {{ .Values.configMap.MONGO_URL }}
