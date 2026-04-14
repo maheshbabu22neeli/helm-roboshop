@@ -188,3 +188,16 @@ REVISION: 1
 TEST SUITE: None
 
 ````
+
+### Frontend
+```shell
+$ helm upgrade --install frontend .
+Release "frontend" has been upgraded. Happy Helming!
+NAME: frontend
+LAST DEPLOYED: Tue Apr 14 13:14:44 2026
+NAMESPACE: roboshop
+STATUS: deployed
+REVISION: 2
+TEST SUITE: None
+
+```
