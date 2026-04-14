@@ -48,7 +48,6 @@ helm rollback <chart-name>  2             -> rollback to specific version 2
 ## Helm-Roboshop
 
 ### Mongodb
-
 ```shell
 $ helm upgrade --install mongodb .
 Release "mongodb" does not exist. Installing it now.
@@ -80,7 +79,6 @@ mongodb   ClusterIP   10.100.182.86   <none>        27017/TCP   89s
 
 
 ### Catalogue
-
 ```shell
 $ helm upgrade --install catalogue .
 Release "catalogue" does not exist. Installing it now.
@@ -93,7 +91,6 @@ TEST SUITE: None
 ```
 
 ### Redis
-
 ```shell
 $ helm upgrade --install redis .
 Release "redis" does not exist. Installing it now.
@@ -141,7 +138,6 @@ TEST SUITE: None
 ```
 
 ### MySql
-
 ````shell
 $ helm upgrade --install mysql .
 Release "mysql" does not exist. Installing it now.
@@ -155,7 +151,6 @@ TEST SUITE: None
 ````
 
 ### Shipping
-
 ````shell
 $ helm upgrade --install shipping .
 Release "shipping" does not exist. Installing it now.
@@ -169,7 +164,19 @@ TEST SUITE: None
 ````
 
 ### RabbitMq
+````shell
+$ helm upgrade --install rabbitmq .
+Release "rabbitmq" does not exist. Installing it now.
+NAME: rabbitmq
+LAST DEPLOYED: Tue Apr 14 12:54:28 2026
+NAMESPACE: roboshop
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
 
+````
+
+### Payment
 ````shell
 
 ````
