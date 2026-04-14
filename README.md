@@ -143,5 +143,28 @@ TEST SUITE: None
 ### MySql
 
 ````shell
+$ helm upgrade --install mysql .
+Release "mysql" does not exist. Installing it now.
+NAME: mysql
+LAST DEPLOYED: Tue Apr 14 12:40:03 2026
+NAMESPACE: roboshop
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
 
 ````
+
+### Shipping
+
+````shell
+$ helm upgrade --install shipping .
+Release "shipping" does not exist. Installing it now.
+NAME: shipping
+LAST DEPLOYED: Tue Apr 14 12:46:14 2026
+NAMESPACE: roboshop
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+
+````
+
