@@ -120,5 +120,22 @@ TEST SUITE: None
 
 ### Cart
 ```shell
+$ helm upgrade --install cart .
+Release "cart" does not exist. Installing it now.
+Error: 1 error occurred:
+        * ConfigMap in version "v1" cannot be handled as a ConfigMap: json: cannot unmarshal number into Go struct field ConfigMap.data of type string
+
+
+Add quotes to numeric values ex: at configmap.yaml see CATALOGUE_PORT: "{{ .Values.configMap.CATALOGUE_PORT }}"
+
+
+ helm upgrade --install cart .
+Release "cart" does not exist. Installing it now.
+NAME: cart
+LAST DEPLOYED: Tue Apr 14 12:33:10 2026
+NAMESPACE: roboshop
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
 
 ```
