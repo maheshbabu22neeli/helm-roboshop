@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+  namespace: roboshop
+  annotations:
+    kubernetes.io/change-cause: {{ .Values.deployment.change-cause }}
+  labels:
+    tier: database
+    project: rosboshop
+    component: mongodb
+
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    # This match labels will go and find the pods who contain these labels
+    matchLabels:
+      tier: database
+      project: rosboshop
+      component: mongodb
+
+  # This is a POD definition/template (pod is a subset of replica-set)
+  template:
+    metadata:
+      # POD Labels, these labels will refer in replica-set selector
+      labels:
+        tier: database
+        project: rosboshop
+        component: mongodb
+    spec:
+      containers:
+        - name: mongodb
+          image: "{{ .Values.deployment.image }}:{{ .Values.deployment.imageVersion }}"
+          imagePullPolicy: Always
