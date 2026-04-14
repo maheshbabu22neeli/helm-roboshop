@@ -7,14 +7,14 @@ metadata:
   namespace: roboshop
   labels:
     tier: database
-    project: rosboshop
+    project: roboshop
     component: mongodb
 
 spec:
   selector:
     # selecting mongodb pod based on the below labels and add to the service
     tier: database
-    project: rosboshop
+    project: roboshop
     component: mongodb
   ports:
     - protocol: TCP

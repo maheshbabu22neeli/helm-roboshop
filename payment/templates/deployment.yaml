@@ -9,7 +9,7 @@ metadata:
     kubernetes.io/change-cause: {{ .Values.deployment.changeCause }}
   labels:
     tier: backend
-    project: rosboshop
+    project: roboshop
     component: payment
 
 spec:
@@ -18,7 +18,7 @@ spec:
     # This match labels will go and find the pods who contain these labels
     matchLabels:
       tier: backend
-      project: rosboshop
+      project: roboshop
       component: payment
 
   # This is a POD definition/template (pod is a subset of replica-set)
@@ -27,7 +27,7 @@ spec:
       # POD Labels, these labels will refer in replica-set selector
       labels:
         tier: backend
-        project: rosboshop
+        project: roboshop
         component: payment
     spec:
       containers:

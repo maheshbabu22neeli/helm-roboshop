@@ -7,14 +7,14 @@ metadata:
   namespace: roboshop
   labels:
     tier: backend
-    project: rosboshop
+    project: roboshop
     component: user
 
 spec:
   selector:
     # selecting user pod based on the below labels and add to the service
     tier: backend
-    project: rosboshop
+    project: roboshop
     component: user
   ports:
     - protocol: TCP

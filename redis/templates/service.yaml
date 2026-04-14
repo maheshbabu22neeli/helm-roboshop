@@ -7,14 +7,14 @@ metadata:
   namespace: roboshop
   labels:
     tier: database
-    project: rosboshop
+    project: roboshop
     component: redis
 
 spec:
   selector:
     # selecting redis pod based on the below labels and add to the service
     tier: database
-    project: rosboshop
+    project: roboshop
     component: redis
   ports:
     - protocol: TCP

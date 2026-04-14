@@ -2,35 +2,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cart
+  name: frontend
   namespace: roboshop
   annotations:
     kubernetes.io/change-cause: {{ .Values.deployment.changeCause }}
   labels:
-    tier: backend
+    tier: frontend
     project: roboshop
-    component: cart
+    component: frontend
 
 spec:
   replicas: {{ .Values.deployment.replicas }}
   selector:
     # This match labels will go and find the pods who contain these labels
     matchLabels:
-      tier: backend
+      tier: frontend
       project: roboshop
-      component: cart
+      component: frontend
 
   # This is a POD definition/template (pod is a subset of replica-set)
   template:
     metadata:
       # POD Labels, these labels will refer in replica-set selector
       labels:
-        tier: backend
+        tier: frontend
         project: roboshop
-        component: cart
+        component: frontend
     spec:
       containers:
-        - name: cart
+        - name: frontend
           image: "{{ .Values.deployment.image }}:{{ .Values.deployment.imageVersion }}"
           imagePullPolicy: Always   # Always pull the image from ECR/GitHub
 
@@ -47,23 +47,24 @@ spec:
 
           readinessProbe:
             tcpSocket:
-              port: 8080
+              port: 80
               #httpGet:
-              #path: /health
-              #port: 8080
+              #path: /
+              #port: 80
             initialDelaySeconds: 5
             failureThreshold: 2
             periodSeconds: 10
 
           livenessProbe:
             httpGet:
-              path: /health
-              port: 8080
+              path: /
+              port: 80
             failureThreshold: 2
             periodSeconds: 10
 
-          # This container will refer to the above created config map with name 'cart'
+          # This container will refer to the above created config map with name 'frontend'
           envFrom:
             - configMapRef:
-                name: cart
+                name: frontend
+
 

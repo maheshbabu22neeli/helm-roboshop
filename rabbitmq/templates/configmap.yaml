@@ -6,7 +6,7 @@ metadata:
   namespace: roboshop
   labels:
     tier: database
-    project: rosboshop
+    project: roboshop
     component: rabbitmq
 
 data:

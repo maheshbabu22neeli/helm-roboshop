@@ -7,14 +7,14 @@ metadata:
   namespace: roboshop
   labels:
     tier: database
-    project: rosboshop
+    project: roboshop
     component: mysql
 
 spec:
   selector:
     # selecting mysql pod based on the below labels and add to the service
     tier: database
-    project: rosboshop
+    project: roboshop
     component: mysql
   ports:
     - protocol: TCP

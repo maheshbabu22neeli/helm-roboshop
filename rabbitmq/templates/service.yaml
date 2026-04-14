@@ -7,14 +7,14 @@ metadata:
   namespace: roboshop
   labels:
     tier: database
-    project: rosboshop
+    project: roboshop
     component: rabbitmq
 
 spec:
   selector:
     # selecting rabbitmq pod based on the below labels and add to the service
     tier: database
-    project: rosboshop
+    project: roboshop
     component: rabbitmq
   ports:
     - protocol: TCP

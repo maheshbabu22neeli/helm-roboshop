@@ -178,5 +178,13 @@ TEST SUITE: None
 
 ### Payment
 ````shell
+$ helm upgrade --install payment .
+Release "payment" does not exist. Installing it now.
+NAME: payment
+LAST DEPLOYED: Tue Apr 14 12:59:59 2026
+NAMESPACE: roboshop
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
 
 ````

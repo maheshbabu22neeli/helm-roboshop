@@ -7,14 +7,14 @@ metadata:
   namespace: roboshop
   labels:
     tier: backend
-    project: rosboshop
+    project: roboshop
     component: payment
 
 spec:
   selector:
     # selecting payment pod based on the below labels and add to the service
     tier: backend
-    project: rosboshop
+    project: roboshop
     component: payment
   ports:
     - protocol: TCP
